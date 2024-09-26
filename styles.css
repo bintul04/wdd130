@@ -1,49 +1,68 @@
+:root {
+  /* Color Variables */
+  --primary-color: steelblue;
+  --secondary-color: #247247;
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --gray-color: gray;
+  --light-gray: #eee;
+  --dark-gray: #333;
+
+  /* Sizing Variables */
+  --nav-padding: 10px;
+  --link-padding: 20px;
+  --img-width: 150px;
+  --div-width: 500px;
+  --div-margin: 10px;
+  --div-padding: 50px;
+  --border-width: 10px;
+  --aside-width: 20rem;
+  --aside-margin: 1rem;
+  --footer-margin-top: 1em;
+
+  /* Box Shadow */
+  --img-box-shadow: 0 0 30px var(--gray-color);
+}
+
 nav {
-    background-color: steelblue;
-    padding: 10px;
-  }
-  nav a {
-    color: white;
-    display: block;
-    padding: 20px;
-  }
-  h1 {
-    color: steelblue;
-  }
-  main img {
-    width: 150px;
-    height: auto;
-    border: 1px solid steelblue;
-    padding: 2px;
-    box-shadow: 0 0 30px gray; 
-  }
-  p {
-    padding: 0;
-  }
-  div {
-    box-sizing: border-box;
-   width: 500px;
-  margin: 10px ;
-  border: 10px solid #000000;
-  padding: 50px;
-  background-color: #247247;
-  color: #ffffff;
+  background-color: var(--primary-color);
+  padding: var(--nav-padding);
+}
+nav a {
+  color: var(--white-color);
+  display: block;
+  padding: var(--link-padding);
+}
+h1 {
+  color: var(--primary-color);
+}
+main img {
+  width: var(--img-width);
+  height: auto;
+  border: 1px solid var(--primary-color);
+  padding: 2px;
+  box-shadow: var(--img-box-shadow);
+}
+div {
+  box-sizing: border-box;
+  width: var(--div-width);
+  margin: var(--div-margin);
+  border: var(--border-width) solid var(--black-color);
+  padding: var(--div-padding);
+  background-color: var(--secondary-color);
+  color: var(--white-color);
 }
 aside {
-  width: 20rem;
-  margin: 1rem;
-  border: 1px solid rgba(0, 0, 0, 0.2); /* 1️⃣ */
+  width: var(--aside-width);
+  margin: var(--aside-margin);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 1rem;
-  background-color: #eee;
-  color: #333;
+  background-color: var(--light-gray);
+  color: var(--dark-gray);
   text-align: center;
 }
-aside img {
-  width: 200px;
-  height: auto;
-}
 footer {
-  margin-top: 1em;
-  border-top: 1px solid #000;
-  text-align:center;
+  margin-top: var(--footer-margin-top);
+  border-top: 1px solid var(--black-color);
+  text-align: center;
 }
