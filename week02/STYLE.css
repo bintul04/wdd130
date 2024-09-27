@@ -47,3 +47,98 @@ footer {
   border-top: 1px solid #000;
   text-align:center;
 }
+starts here
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* Color Variables */
+  --primary-color: steelblue;
+  --secondary-color: #247247;
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --gray-color: gray;
+  --light-gray: #eee;
+  --dark-gray: #333;
+
+  /* Sizing Variables */ 
+  --nav-padding: 10px;
+  --link-padding: 20px;
+  --img-width: 150px;
+  --div-width: 500px; 
+  --div-margin: 10px;
+  --div-padding: 50px;
+  --border-width: 10px;
+  --aside-width: 20rem;
+  --aside-margin: 1rem;
+  --footer-margin-top: 1em;
+
+  /* Box Shadow */
+  --img-box-shadow: 0 0 30px var(--gray-color);
+}
+
+nav {
+  background-color: var(--primary-color);
+  padding: var(--nav-padding);
+}
+nav a {
+  color: var(--white-color);
+  display: block;
+  padding: var(--link-padding);
+}
+h1 {
+  color: var(--primary-color);
+}
+main img {
+  width: var(--img-width);
+  height: auto;
+  border: 1px solid var(--primary-color);
+  padding: 2px;
+  box-shadow: var(--img-box-shadow);
+  float: right;
+  margin-left: 20px;
+  margin: 10px;
+}
+div {
+  box-sizing: border-box;
+  width: var(--div-width);
+  margin: var(--div-margin);
+  border: var(--border-width) solid var(--black-color);
+  padding: var(--div-padding);
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+}
+aside {
+  width: var(--aside-width);
+  margin: var(--aside-margin);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  background-color: var(--light-gray);
+  color: var(--dark-gray);
+  text-align: center;
+}
+footer {
+  margin-top: var(--footer-margin-top);
+  border-top: 1px solid var(--black-color);
+  text-align: center;
+}
+/* Class Selectors */
+.box {
+  margin: 1rem;
+  border: 1px solid rgba(0,0,0,.1);
+  padding: 1rem;
+  background-color: #ddd;
+  color: #000;
+}
+
+
+<p>My ultimate goal is to become a software developer who not only writes code but also makes a difference through innovation.</p>
+      <ul= class="box">
+        <li><a href="https://www.churchofjesuschrist.org/temples/details/accra-ghana-temple?lang=eng" target="_blank">Ghana Accra Temple</a></li>
+        <li><a href="https://www.churchofjesuschrist.org/temples/details/freetown-sierra-leone-temple?lang=eng" target="_blank">Sierra Leone Freetown Temple</a></li>
+        <li><a href="https://www.churchofjesuschrist.org/temples/details/payson-utah-temple?lang=eng" target="_blank">Payson Utah Temple</a></li>
+      </ul>
+
+      <!--Last modified: September 26, 2024-->

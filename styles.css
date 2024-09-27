@@ -1,68 +1,51 @@
-:root {
-  /* Color Variables */
-  --primary-color: steelblue;
-  --secondary-color: #247247;
-  --white-color: #ffffff;
-  --black-color: #000000;
-  --gray-color: gray;
-  --light-gray: #eee;
-  --dark-gray: #333;
-
-  /* Sizing Variables */
-  --nav-padding: 10px;
-  --link-padding: 20px;
-  --img-width: 150px;
-  --div-width: 500px;
-  --div-margin: 10px;
-  --div-padding: 50px;
-  --border-width: 10px;
-  --aside-width: 20rem;
-  --aside-margin: 1rem;
-  --footer-margin-top: 1em;
-
-  /* Box Shadow */
-  --img-box-shadow: 0 0 30px var(--gray-color);
-}
-
 nav {
-  background-color: var(--primary-color);
-  padding: var(--nav-padding);
+  background-color: steelblue;
+  padding: 10px;
 }
+
 nav a {
-  color: var(--white-color);
+  color: white;
+  padding: 10px;
   display: block;
-  padding: var(--link-padding);
 }
+
 h1 {
-  color: var(--primary-color);
+  color: steelblue;
 }
+
 main img {
-  width: var(--img-width);
+  width: 150px;
   height: auto;
-  border: 1px solid var(--primary-color);
+  border: 1px solid steelblue;
   padding: 2px;
-  box-shadow: var(--img-box-shadow);
+  box-shadow: 0 0 30px gray; 
 }
-div {
-  box-sizing: border-box;
-  width: var(--div-width);
-  margin: var(--div-margin);
-  border: var(--border-width) solid var(--black-color);
-  padding: var(--div-padding);
-  background-color: var(--secondary-color);
-  color: var(--white-color);
+
+p {
+  margin: 1rem 0;    /* Adds space between paragraphs */
+  line-height: 1.6;  /* Improves readability */
+  font-size: 1rem;   /* Sets consistent font size */
+  color: #333;       /* Dark gray for readability */
+  padding: 0;        /* Ensures no padding inside paragraphs */
 }
+
 aside {
-  width: var(--aside-width);
-  margin: var(--aside-margin);
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 20rem;
+  margin: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.2); /* 1️⃣ */
   padding: 1rem;
-  background-color: var(--light-gray);
-  color: var(--dark-gray);
+  background-color: #eee;
+  color: #333;
   text-align: center;
+} 
+
+aside img {
+  width: 200px;
+  height: auto;
 }
+
 footer {
-  margin-top: var(--footer-margin-top);
-  border-top: 1px solid var(--black-color);
+  margin-top: 15px;
+  border-top: 1px solid #000;
   text-align: center;
 }
