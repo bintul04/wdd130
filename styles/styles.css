@@ -1,63 +1,114 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Define CSS variables in the :root selector */
+:root {
+  --primary-color: steelblue;
+  --secondary-color: #eee;
+  --text-color: #333;
+  --link-color: white;
+  --border-color: rgba(0, 0, 0, 0.2);
+  --light-border-color: #ccc;
+  --font-size: 1rem;
+  --padding: 10px;
+  --main-padding: 20px;
+  --margin-auto: 0 auto;
+  --box-shadow-gray: 0 0 30px gray;
+  --box-shadow-light: 0 0 10px rgba(0, 0, 0, 0.1);
+  --max-width: 1200px;
+  --aside-width: 20rem;
+  --aside-padding: 1rem;
+  --aside-margin: 1rem;
+  --footer-margin-top: 15px;
+  --footer-border-top: 1px solid #000;
+  --line-height: 1.6;
+}
+
+/* Navigation styles */
 nav {
-  background-color: steelblue;
-  padding: 10px;
+  background-color: var(--primary-color);
+  padding: var(--padding);
 }
 
 nav a {
-  color: white;
-  padding: 10px;
+  color: var(--link-color);
+  padding: var(--padding);
   display: block;
 }
 
+/* Heading styles */
 h1 {
-  color: steelblue;
+  color: var(--primary-color);
 }
 
+/* Main content styles */
 main {
-  max-width: 1200px; /* Limits the width of the main content area */
-  margin: 0 auto;    /* Centers the main content within its parent element */
-  padding: 20px;     /* Adds padding inside the main content */
+  max-width: var(--max-width);
+  margin: var(--margin-auto);
+  padding: var(--main-padding);
 }
 
 main img {
+  float: right;
   width: 150px;
   height: auto;
-  border: 1px solid steelblue;
+  border: 1px solid var(--primary-color);
   padding: 2px;
-  box-shadow: 0 0 30px gray; 
+  box-shadow: var(--box-shadow-gray);
 }
 
+/* Paragraph styles */
 p {
-  padding: 0;             /* Ensures no padding inside paragraphs */
-  margin: 1rem 0;        /* Adds space between paragraphs */
-  line-height: 1.6;      /* Improves readability by increasing line spacing */
-  font-size: 1rem;       /* Sets a consistent font size */
-  color: #333;           /* Uses a dark gray for text color for better contrast */
+  padding: 0;
+  margin: 1rem 0;
+  line-height: var(--line-height);
+  font-size: var(--font-size);
+  color: var(--text-color);
 }
 
+/* Aside styles */
 aside {
-  width: 20rem;
-  margin: 1rem;
-  border: 1px solid rgba(0, 0, 0, 0.2); /* 1️⃣ */
-  padding: 1rem;
-  background-color: #eee;
-  color: #333;
+  width: var(--aside-width);
+  margin: var(--aside-margin);
+  border: 1px solid var(--border-color);
+  padding: var(--aside-padding);
+  background-color: var(--secondary-color);
+  color: var(--text-color);
   text-align: center;
-} 
+}
+aside h2 {
+  position: absolute; /* Positioning the heading absolutely */
+  top: 47px; /* Adjust this value as needed */
+  left: 150px; /* Adjust this value as needed */
+  color: var(--text-color); /* Optional: color to make sure text stands out */
+  background: rgba(255, 255, 255, 0.8); /* Optional: background for readability */
+  padding: 5px; /* Optional: padding for better appearance */
+}
 
 aside img {
-  width: 200px;             /* Sets a fixed width for the images */
-  height: auto;            /* Maintains the aspect ratio */
-  margin: 0 auto;          /* Centers the image horizontally */
-  display: block;          /* Makes the image a block element for centering */
-  border: 1px solid #ccc;  /* Adds a light gray border around the image */
-  padding: 3px;            /* Adds padding inside the border */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+  width: 200px;
+  height: auto;
+  margin: var(--margin-auto);
+  display: block;
+  border: 1px solid var(--light-border-color);
+  padding: 3px;
+  box-shadow: var(--box-shadow-light);
 }
 
-
+/* Footer styles */
 footer {
-  margin-top: 15px;
-  border-top: 1px solid #000;
+  margin-top: var(--footer-margin-top);
+  border-top: var(--footer-border-top);
   text-align: center;
+}
+/* Class Selector */
+.box {
+  margin: 1rem;
+  border: 1px solid rgba(0,0,0,.1);
+  padding: 1rem;
+  background-color: #ddd;
+  color: #000;
 }
