@@ -81,14 +81,14 @@ aside {
 aside h2 {
   position: relative; /* Positioning the heading absolutely */
   top: 47px; /* Adjust this value as needed */
-  left: 150px; /* Adjust this value as needed */
+  left: 50px; /* Adjust this value as needed */
   color: var(--text-color); /* Optional: color to make sure text stands out */
-  background: rgba(255, 255, 255, 0.8); /* Optional: background for readability */
-  padding: 5px; /* Optional: padding for better appearance */
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0px; /* Optional: padding for better appearance */
 }
 
 aside img {
-  width: 200px;
+  width: 250px;
   height: auto;
   margin: var(--margin-auto);
   display: block;
@@ -103,7 +103,7 @@ footer {
   border-top: var(--footer-border-top);
   text-align: center;
 }
-/* Class Selector: Box styling */
+/*Class Selector*/
 .box {
   margin: 1rem;
   border: 1px solid rgba(0,0,0,.1);
