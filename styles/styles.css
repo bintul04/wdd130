@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -80,7 +79,7 @@ aside {
   text-align: center;
 }
 aside h2 {
-  position: absolute; /* Positioning the heading absolutely */
+  position: relative; /* Positioning the heading absolutely */
   top: 47px; /* Adjust this value as needed */
   left: 150px; /* Adjust this value as needed */
   color: var(--text-color); /* Optional: color to make sure text stands out */
@@ -104,7 +103,7 @@ footer {
   border-top: var(--footer-border-top);
   text-align: center;
 }
-/* Class Selector */
+/* Class Selector: Box styling */
 .box {
   margin: 1rem;
   border: 1px solid rgba(0,0,0,.1);
