@@ -70,3 +70,105 @@ footer {
       </ul>
 
       <!--Last modified: September 26, 2024-->
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      /* Define CSS variables in the :root selector */
+      :root {
+        --primary-color: steelblue;
+        --secondary-color: #eee;
+        --text-color: #333;
+        --link-color: white;
+        --border-color: rgba(0, 0, 0, 0.2);
+        --light-border-color: #ccc;
+        --font-size: 1rem;
+        --padding: 10px;
+        --main-padding: 20px;
+        --margin-auto: 0 auto;
+        --box-shadow-gray: 0 0 30px gray;
+        --box-shadow-light: 0 0 10px rgba(0, 0, 0, 0.1);
+        --max-width: 1200px;
+        --aside-width: 20rem;
+        --aside-padding: 1rem;
+        --aside-margin: 1rem;
+        --footer-margin-top: 15px;
+        --footer-border-top: 1px solid #000;
+        --line-height: 1.6;
+      }
+      
+      /* Navigation styles */
+      nav {
+        background-color: var(--primary-color);
+        padding: var(--padding);
+      }
+      
+      nav a {
+        color: var(--link-color);
+        padding: var(--padding);
+        display: block;
+      }
+      
+      /* Heading styles */
+      h1 {
+        color: var(--primary-color);
+      }
+      
+      /* Main content styles */
+      main {
+        max-width: var(--max-width);
+        margin: var(--margin-auto);
+        padding: var(--main-padding);
+      }
+      
+      main img {
+        float: right;
+        width: 150px;
+        height: auto;
+        border: 1px solid var(--primary-color);
+        padding: 2px;
+        box-shadow: var(--box-shadow-gray);
+      }
+      
+      /* Paragraph styles */
+      p {
+        padding: 0;
+        margin: 1rem 0;
+        line-height: var(--line-height);
+        font-size: var(--font-size);
+        color: var(--text-color);
+      }
+      
+      /* Aside styles */
+      
+      
+      aside img {
+        width: 250px;
+        height: auto;
+        margin: var(--margin-auto);
+        display: block;
+        border: 1px solid var(--light-border-color);
+        padding: 3px;
+        box-shadow: var(--box-shadow-light);
+      }
+      
+      /* Footer styles */
+      footer {
+        margin-top: var(--footer-margin-top);
+        border-top: var(--footer-border-top);
+        text-align: center;
+      }
+      #country{
+        text-align: center;
+      }
+      
+      /*Class Selectors*/
+      .box {
+        margin: 1rem;
+        border: 1px solid rgba(0,0,0,.1);
+        padding: 1rem;
+        background-color: #dddddd;
+        color: #000;
+        text-align: center;
+      }

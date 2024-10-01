@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 /* Define CSS variables in the :root selector */
 :root {
   --primary-color: steelblue;
@@ -61,7 +62,6 @@ main img {
 
 /* Paragraph styles */
 p {
-  padding: 0;
   margin: 1rem 0;
   line-height: var(--line-height);
   font-size: var(--font-size);
@@ -77,14 +77,19 @@ aside {
   background-color: var(--secondary-color);
   color: var(--text-color);
   text-align: center;
+  position: relative;
 }
+
 aside h2 {
-  position: center; /* Positioning the heading absolutely */
-  top: 47px; /* Adjust this value as needed */
-  left: 50px; /* Adjust this value as needed */
-  color: var(--text-color); /* Optional: color to make sure text stands out */
-  background: rgba(255, 255, 255, 0.2);
-  padding: 0px; /* Optional: padding for better appearance */
+  text-align: center;
+  top: 10px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  color: var(--text-color);
+  background: rgba(255, 255, 255, 0.5);
+  padding: 5px;
+  position: absolute;
 }
 
 aside img {
@@ -103,14 +108,11 @@ footer {
   border-top: var(--footer-border-top);
   text-align: center;
 }
-#country{
-  text-align: center;
-}
 
-/*Class Selectors*/
+/* Class Selectors */
 .box {
   margin: 1rem;
-  border: 1px solid rgba(0,0,0,.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 1rem;
   background-color: #dddddd;
   color: #000;
