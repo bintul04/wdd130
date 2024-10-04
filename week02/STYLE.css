@@ -221,3 +221,71 @@ footer {
   </body>
   <!--Last modified: September 29, 2024-->
 </html>
+
+
+
+
+
+
+/* Define CSS Variables for Color Scheme */
+:root {
+  --primary-color: #10447f; /* Indigo Dye */
+  --secondary-color: #ffffff; /* White */
+  --accent-color: #f2cb07; /* Jonquil */
+  --text-color: #000000; /* Dark Text */
+  --heading-color: #10447f; /* Dark Blue for Headings */
+  --background-color: #ffffff; /* Light background */
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Headings Styling */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  color: var(--primary-color); /* Deep blue for headings */
+}
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+/* Paragraph Styling */
+p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--text-color); /* Black text */
+}
+
+/* Hero Section Styling */
+.hero {
+  background-image: url('../images/rivernarrow.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: auto;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary-color); /* White text in hero section */
+  text-align: center;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  z-index: 1;
+}
