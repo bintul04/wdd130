@@ -45,25 +45,23 @@ nav a:hover {
 
 /* Hero Section Styling */
 .hero {
-    position: relative; /* Allows absolute positioning for h1 and article */
-    height: 500px; /* Adjust height as per design */
-    overflow: hidden; /* Ensures no content spills out of the hero container */
-    background-image: url('../images/rivernarrow.jpg'); /* Path to your image */
-    background-size: cover; /* Ensures the image covers the entire hero area */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-color: var(--secondary-color); /* Fallback color if image doesn't load */
+    position: relative;
+    height: 500px; 
+    overflow: hidden;
+    background-image: url('../images/rivernarrow.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--secondary-color);
 }
 
-/* Hero Image Styling */
-/* H1 Heading Positioned Absolutely */
 .hero h1 {
     position: absolute;
-    top: 20px; /* Adjust this value to position the heading from the top */
-    left: 20px; /* Adjust this value to position the heading from the left */
-    font-size: 2rem; /* Adjust heading size as necessary */
-    color: var(--secondary-color); /* White color for visibility */
-    z-index: 2; /* Ensure it appears above the background image */
+    top: 20px;
+    left: 20px;
+    font-size: 2rem;
+    color: var(--secondary-color);
+    z-index: 2;
     background-color: #00000080;
     padding: 10px;
     border-radius: 5px;
@@ -72,29 +70,29 @@ nav a:hover {
 /* Article Positioned Absolutely */
 .hero article {
     position: absolute;
-    bottom: 20px; /* Position the article near the bottom of the hero section */
-    left: 20px; /* Position the article from the left */
-    width: 80%; /* Make the article take 80% of the width */
-    background-color: rgba(255, 255, 255, 0.25); /* Semi-transparent background for readability */
-    padding: 20px; /* Adds internal spacing */
-    border-radius: 8px; /* Softens corners of the article */
-    z-index: 1; /* Ensure it's above the image but below the h1 */
+    bottom: 20px; 
+    left: 20px;
+    width: 80%; 
+    background-color: rgba(255, 255, 255, 0.25); 
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1; 
 }
 
 /* Image Inside Article Floating Right */
 .hero article img {
     float: right;
-    width: 150px; /* Adjust image size */
-    height: auto; /* Maintain aspect ratio */
-    margin-left: 20px; /* Creates space between the image and paragraph */
-    border-radius: 8px; /* Adds a rounded edge to the image */
+    width: 150px; 
+    height: auto; 
+    margin-left: 20px; 
+    border-radius: 8px;
 }
 
 /* Paragraph Styling Inside the Article */
 .hero article p {
-    color: var(--text-color); /* Ensure readability with a contrasting color */
-    font-size: 1.1rem; /* Adjust font size as needed */
-    line-height: 1.6; /* Spacing between lines for readability */
+    color: var(--text-color); 
+    font-size: 1.1rem; 
+    line-height: 1.6; 
 }
 
 /* Clearfix for Floating Image in Article */
@@ -116,25 +114,25 @@ section h2 {
 /* Rafting Images Styles (Vertical Layout) */
 .rafting-images {
     display: flex;
-    flex-direction: column; /* Stack images vertically */
+    flex-direction: column; 
     align-items: center;
-    gap: 20px; /* Space between images */
-    max-width: 400px; /* Limit container width */
-    margin: 0 auto; /* Center the container */
+    gap: 20px; 
+    max-width: 400px; 
+    margin: 0 auto;
 }
 
 .rafting-images img {
-    width: 100%; /* Full width */
+    width: 100%;
     max-width: 400px; /* Limit max width */
     height: auto;
-    border-radius: 10px; /* Rounded corners */
-    object-fit: cover; /* Keep image aspect ratio */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
-    transition: transform 0.3s ease; /* Smooth hover effect */
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
 
 .rafting-images img:hover {
-    transform: scale(1.05); /* Zoom on hover */
+    transform: scale(1.05);
 }
 
 /* Footer Styles */
@@ -146,18 +144,18 @@ footer {
 }
 
 footer a {
-    text-decoration: none; /* Removes underline from the links */
-    color: var(--secondary-color); /* Use the secondary color for the links */
-    margin: 0 10px; /* Spacing between social media icons */
+    text-decoration: none;
+    color: var(--secondary-color);
+    margin: 0 10px;
 }
 footer a img {
-    width: 30px; /* Set the size of the social media icons */
+    width: 30px;
     height: auto;
     margin: 0 5px;
 }
 
 footer a:hover {
-    text-decoration: underline; /* Optional hover effect */
+    text-decoration: underline;
 }
 footer .footer-content {
     margin-bottom: 10px;
@@ -172,7 +170,7 @@ footer .footer-content {
         width: 90%;
     }
     .rafting-images {
-        max-width: 90%; /* Adjust size for smaller screens */
+        max-width: 90%;
     }
 
     .rafting-images img {
