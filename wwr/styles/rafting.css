@@ -16,7 +16,7 @@ body {
 /* Header Styles */
 header {
     background-color: var(--primary-color);
-    color: var(--secondary-color);
+    color: var(--primary-color);
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
@@ -31,7 +31,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin-right: 20px
 }
 
 nav a {
@@ -46,30 +46,27 @@ nav a:hover {
 /* Hero Section Styling */
 .hero {
     position: relative; /* Allows absolute positioning for h1 and article */
-    height: 400px; /* Adjust height as per design */
+    height: 500px; /* Adjust height as per design */
     overflow: hidden; /* Ensures no content spills out of the hero container */
     background-image: url('../images/rivernarrow.jpg'); /* Path to your image */
     background-size: cover; /* Ensures the image covers the entire hero area */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-color: var(--primary-color); /* Fallback color if image doesn't load */
+    background-color: var(--secondary-color); /* Fallback color if image doesn't load */
 }
 
 /* Hero Image Styling */
-.hero img {
-    display: block;
-    width: 100%; /* Makes the image cover the entire width of the hero section */
-    height: auto; /* Maintains aspect ratio of the image */
-}
-
 /* H1 Heading Positioned Absolutely */
 .hero h1 {
     position: absolute;
     top: 20px; /* Adjust this value to position the heading from the top */
     left: 20px; /* Adjust this value to position the heading from the left */
-    font-size: 3rem; /* Adjust heading size as necessary */
+    font-size: 2rem; /* Adjust heading size as necessary */
     color: var(--secondary-color); /* White color for visibility */
     z-index: 2; /* Ensure it appears above the background image */
+    background-color: #00000080;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 /* Article Positioned Absolutely */
@@ -78,7 +75,7 @@ nav a:hover {
     bottom: 20px; /* Position the article near the bottom of the hero section */
     left: 20px; /* Position the article from the left */
     width: 80%; /* Make the article take 80% of the width */
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
+    background-color: rgba(255, 255, 255, 0.25); /* Semi-transparent background for readability */
     padding: 20px; /* Adds internal spacing */
     border-radius: 8px; /* Softens corners of the article */
     z-index: 1; /* Ensure it's above the image but below the h1 */
@@ -106,13 +103,46 @@ nav a:hover {
     display: block;
     clear: both;
 }
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+section h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+/* Rafting Images Styles (Vertical Layout) */
+.rafting-images {
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    align-items: center;
+    gap: 20px; /* Space between images */
+    max-width: 400px; /* Limit container width */
+    margin: 0 auto; /* Center the container */
+}
+
+.rafting-images img {
+    width: 100%; /* Full width */
+    max-width: 400px; /* Limit max width */
+    height: auto;
+    border-radius: 10px; /* Rounded corners */
+    object-fit: cover; /* Keep image aspect ratio */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.rafting-images img:hover {
+    transform: scale(1.05); /* Zoom on hover */
+}
 
 /* Footer Styles */
 footer {
     background-color: var(--primary-color);
     color: var(--secondary-color);
     text-align: center;
-    padding: 10px 20px;
+    padding: 10px;
 }
 
 footer a {
@@ -120,7 +150,39 @@ footer a {
     color: var(--secondary-color); /* Use the secondary color for the links */
     margin: 0 10px; /* Spacing between social media icons */
 }
+footer a img {
+    width: 30px; /* Set the size of the social media icons */
+    height: auto;
+    margin: 0 5px;
+}
 
 footer a:hover {
     text-decoration: underline; /* Optional hover effect */
+}
+footer .footer-content {
+    margin-bottom: 10px;
+}
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 1.5re
+    }
+
+    .hero article {
+        width: 90%;
+    }
+    .rafting-images {
+        max-width: 90%; /* Adjust size for smaller screens */
+    }
+
+    .rafting-images img {
+        width: 100%;
+    }
+    
+
+    nav ul li {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
 }
