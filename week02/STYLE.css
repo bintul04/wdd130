@@ -468,5 +468,185 @@ KEEP THIS HTML FILE FOR
   <!--Last modified: October 1, 2024
   //-->
 </html>
+ ANOTHER :only-of-type/* Reset */
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+ 
+ /* Variables */
+ :root {
+   --primary-color: steelblue;
+   --secondary-color: #eee;
+   --text-color: #333;
+   --link-color: white;
+   --border-color: rgba(0, 0, 0, 0.2);
+   --light-border-color: #ccc;
+   --font-size: 1rem;
+   --padding: 10px;
+   --main-padding: 20px;
+   --margin-auto: 0 auto;
+   --box-shadow-gray: 0 0 30px gray;
+   --box-shadow-light: 0 0 10px rgba(0, 0, 0, 0.1);
+   --max-width: 1200px;
+   --aside-width: 20rem;
+   --aside-padding: 1rem;
+   --aside-margin: 1rem;
+   --footer-margin-top: 15px;
+   --footer-border-top: 1px solid #000;
+   --line-height: 1.6;
+ }
+ 
+ /* Header, Footer, and Grid */
+ header, .grid, footer {
+   max-width: 840px;
+   margin: 0 auto;
+ }
+ 
+ /* Navigation styles */
+ nav {
+   background-color: var(--primary-color);
+   padding: 1rem;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+ }
+ 
+ nav a {
+   display: block;
+   padding: 0.5rem;
+   text-decoration: none;
+   font-size: 1.2rem;
+   font-weight: 700;
+   color: var(--link-color);
+ }
+ 
+ /* Grid layout */
+ .grid {
+   display: grid;
+   grid-template-columns: 1fr 2fr; /* 1fr for aside, 2fr for main */
+   gap: 1rem;
+   align-items: start;
+ }
+ 
+ /* Main section */
+ section {
+   grid-column: 2 / 3; /* Place main content in the second column */
+ }
+ 
+ section img {
+   float: right;
+   width: 150px;
+   height: auto;
+   border: 1px solid var(--primary-color);
+   padding: 2px;
+   box-shadow: var(--box-shadow-gray);
+ }
+ 
+ /* Aside styles */
+ aside {
+   grid-column: 1 / 2;
+   grid-row: 1;
+   padding: var(--aside-padding);
+   background-color: var(--secondary-color);
+   text-align: center;
+ }
+ 
+ aside img {
+   width: 100%;
+   height: auto;
+   margin-bottom: 1rem;
+ }
+ 
+ aside p {
+   font-size: var(--font-size);
+   color: var(--text-color);
+   margin-top: 1rem;
+ }
+ 
+ /* Heading styles */
+ h1 {
+   color: var(--primary-color);
+   border-bottom: 2px solid var(--primary-color);
+   padding-bottom: 0.5rem;
+ }
+ 
+ /* Footer */
+ footer {
+   margin-top: var(--footer-margin-top);
+   border-top: var(--footer-border-top);
+   text-align: center;
+ }
+ 
+ /* Class Selectors */
+ .box {
+   margin: 1rem;
+   border: 1px solid rgba(0, 0, 0, 0.1);
+   padding: 1rem;
+   background-color: #e5e3e3;
+   color: #000;
+ }
+ 
+ /* Temple List Styling */
+ .temple-list {
+   list-style-type: none; /* Remove default bullet points */
+   padding: 1;
+   margin: 1rem 0;
+ }
+ 
+ .temple-list li {
+   border: 1px; /* Light border */
+   border-radius: 0px; /* Rounded corners */
+   margin-bottom: 0rem; /* Space between items */
+   padding: 0rem; /* Padding inside each item */
+   display: flex;
+   align-items: center;
+ }
+ 
+ /* Custom Bullet Points (Squares) */
+ .temple-list li::before {
+   content: "▪";
+   color: var(--primary-color);
+   margin-right: 0.5rem;
+ }
+ 
+ /* Link styling inside the temple list */
+ .temple-list li a {
+   text-decoration: none;
+   color: var(--primary-color);
+   font-weight: 200;
+   font-size: 1rem;
+ }
 
-     
+
+
+
+
+
+
+
+
+ ul.box {
+  list-style-type: disc;
+  background-color: var(--secondary-color);
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+}
+
+ul.box li {
+  margin: 0.5rem 0;
+}
+
+ul.box li a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: #f5f5f5;
+  padding: 0.5rem;
+  display: block;
+  border: 1px solid var(--light-border-color);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

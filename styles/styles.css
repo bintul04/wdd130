@@ -1,11 +1,11 @@
-/* Reset */
+/* Reset default margins and paddings */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Variables */
+/* Define basic CSS variables for reusability */
 :root {
   --primary-color: steelblue;
   --secondary-color: #eee;
@@ -14,27 +14,17 @@
   --border-color: rgba(0, 0, 0, 0.2);
   --light-border-color: #ccc;
   --font-size: 1rem;
-  --padding: 10px;
   --main-padding: 20px;
-  --margin-auto: 0 auto;
-  --box-shadow-gray: 0 0 30px gray;
-  --box-shadow-light: 0 0 10px rgba(0, 0, 0, 0.1);
-  --max-width: 1200px;
-  --aside-width: 20rem;
-  --aside-padding: 1rem;
-  --aside-margin: 1rem;
-  --footer-margin-top: 15px;
-  --footer-border-top: 1px solid #000;
-  --line-height: 1.6;
+  --grid-gap: 1rem;
 }
 
-/* Header, Footer, and Grid */
+/* Center and limit the width of header, grid, and footer */
 header, .grid, footer {
   max-width: 840px;
   margin: 0 auto;
 }
 
-/* Navigation styles */
+/* Navigation bar styling */
 nav {
   background-color: var(--primary-color);
   padding: 1rem;
@@ -52,99 +42,98 @@ nav a {
   color: var(--link-color);
 }
 
-/* Grid layout */
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 2fr; /* 1fr for aside, 2fr for main */
-  gap: 1rem;
-  align-items: start;
+/* Header styling for the h1 tag */
+h1 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid var(--primary-color);
+  padding-bottom: 0.5rem;
 }
 
-/* Main section */
-section {
-  grid-column: 2 / 3; /* Place main content in the second column */
+/* Main section styling */
+main {
+  grid-column: 2/3;
+  margin: 1rem;
+  padding: var(--main-padding);
 }
 
-section img {
+/* Styling the profile picture */
+main img {
   float: right;
   width: 150px;
   height: auto;
   border: 1px solid var(--primary-color);
-  padding: 2px;
-  box-shadow: var(--box-shadow-gray);
+  padding: 1px;
+  margin-left: 10px;
 }
 
-/* Aside styles */
+/* Paragraph styling */
+p {
+  margin: 1rem 0;
+  font-size: var(--font-size);
+  line-height: 1.2;
+  color: var(--text-color);
+}
+
+/* Grid layout */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: var(--grid-gap);
+  align-items: start;
+}
+
+/* Styling for the aside section */
 aside {
-  grid-column: 1 / 2;
-  grid-row: 1;
-  padding: var(--aside-padding);
+  width: 20rem;
+  margin: 1rem;
+  border: 1px solid var(--border-color);
+  padding: 1rem;
   background-color: var(--secondary-color);
+  color: var(--text-color);
   text-align: center;
+}
+
+aside h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--text-color);
 }
 
 aside img {
   width: 100%;
   height: auto;
-  margin-bottom: 1rem;
+  border: 1px solid var(--light-border-color);
+  padding: 3px;
 }
 
-aside p {
-  font-size: var(--font-size);
-  color: var(--text-color);
-  margin-top: 1rem;
+/* Footer styling */
+footer {
+  margin-top: 15px;
+  border-top: 1px solid var(--light-border-color);
+  text-align: center;
+  padding-top: 1rem;
 }
 
-/* Heading styles */
+/* Temple links with styling for the background and bullets */
 h1 {
   color: var(--primary-color);
-  border-bottom: 2px solid var(--primary-color);
-  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
-/* Footer */
-footer {
-  margin-top: var(--footer-margin-top);
-  border-top: var(--footer-border-top);
-  text-align: center;
+ul.box {
+  background-color: var(--secondary-color);
+  border: 1px solid var(--border-color);
+  padding: var(--padding);
+  margin: 1rem 0; /* Add some margin around the box */
 }
 
-/* Class Selectors */
-.box {
-  margin: 1rem;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  background-color: #e5e3e3;
-  color: #000;
+ul.box li a {
+  list-style-type: disc; /* Add bullet points */
+  padding-left: 20px; /* Space for bullets */
 }
 
-/* Temple List Styling */
-.temple-list {
-  list-style-type: none; /* Remove default bullet points */
-  padding: 1;
-  margin: 1rem 0;
-}
-
-.temple-list li {
-  border: 1px; /* Light border */
-  border-radius: 0px; /* Rounded corners */
-  margin-bottom: 0rem; /* Space between items */
-  padding: 0rem; /* Padding inside each item */
-  display: flex;
-  align-items: center;
-}
-
-/* Custom Bullet Points (Squares) */
-.temple-list li::before {
-  content: "▪";
-  color: var(--primary-color);
-  margin-right: 0.5rem;
-}
-
-/* Link styling inside the temple list */
-.temple-list li a {
-  text-decoration: none;
-  color: var(--primary-color);
-  font-weight: 200;
-  font-size: 1rem;
+ul.box li {
+  margin: 0.5rem 0; /* Space between list items */
 }
