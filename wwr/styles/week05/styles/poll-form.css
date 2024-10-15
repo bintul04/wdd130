@@ -81,6 +81,7 @@ label, input, button, select, textarea {
 label {
     text-align: center;
     padding-right: 1rem;
+    line-height: 1.6;
   }
 
   /* Centering the question and checkbox */
@@ -99,7 +100,7 @@ input, select, textarea {
   }
   
   input[type="checkbox"] {
-    width: 20px;   /* Set a custom width */
+    width: 15px;   /* Set a custom width */
     height: 20px;  /* Set a custom height */
     transform: scale(1.5);  /* Scale up the checkbox to match the image size */
     margin-left: 0;  /* Add space between the checkbox and label */
@@ -110,6 +111,7 @@ input, select, textarea {
 .form-item {
     display: grid;
     align-items: center;
+    margin-bottom: 1rem;
   }
 
   /* Update for select dropdown alignment */
