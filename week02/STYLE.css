@@ -849,3 +849,159 @@ ul.box li a {
 ul.box li {
   margin: 0.5rem 0; /* Space between list items */
 }
+
+
+/* General Page Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: #2a2a7c; /* Dark blue for the header */
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Custom Checkbox Styling */
+.custom-checkbox {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  margin-right: 10px;
+}
+
+.custom-checkbox input {
+  opacity: 0;
+  position: absolute;
+  cursor: pointer;
+}
+
+.custom-checkbox span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 2px solid black; /* Border color for checkbox */
+  background-color: white; /* Background color for checkbox */
+  border-radius: 3px; /* Optional: rounded corners */
+  position: relative; /* Needed for absolute positioning of checkmark */
+}
+
+/* Checkmark styling */
+.custom-checkbox input:checked + span {
+  background-color: black; /* Background color when checked */
+}
+
+.custom-checkbox input:checked + span::after {
+  content: '';
+  position: absolute;
+  left: 6px; /* Adjust based on size */
+  top: 2px;  /* Adjust based on size */
+  width: 5px;  /* Checkmark width */
+  height: 10px; /* Checkmark height */
+  border: solid white; /* Color of the checkmark */
+  border-width: 0 2px 2px 0; /* Create the checkmark shape */
+  transform: rotate(45deg); /* Rotate to form a checkmark */
+}
+
+/* Main Quiz Section */
+main {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Question Number Styling */
+.question strong {
+  color: #2a2a7c; /* Dark blue for the question numbers */
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+pre, code {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: 'Courier New', monospace;
+  display: block;
+  margin-top: 10px;
+}
+
+/* Submit Button */
+.submit-btn {
+  text-align: center;
+}
+
+button[type="submit"] {
+  background-color: #2a2a7c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+}
+
+button[type="submit"]:hover {
+  background-color: #1a1a5c;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #666;
+}
