@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - White Water Rafting</title>
+    <meta name="description" content="Contact us for inquiries about our rafting services.">
+    <link rel="stylesheet" href="styles/contact.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <img src="images/splash.png" alt="White Water Rafting Logo">
+        <nav>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="trips.html">Trips</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Company Info Section -->
+        <section class="company-info">
+            <h1>Contact Us</h1>
+            <p>Address: 123 River Rapids Lane, Raft City, 45678</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Email: contact@raftingadventures.com</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d80032.19886997904!2d-11.782838540129354!3d7.995149430930723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e6!4m3!3m2!1d8.006190799999999!2d-11.8058189!4m3!3m2!1d7.953719199999999!2d-11.747197499999999!5e0!3m2!1sen!2ssl!4v1729070587127!5m2!1sen!2ssl" width=300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+        </section>
+
+        <!-- Employee Profiles -->
+        <section class="employees">
+            <h2>Meet Our Team</h2>
+            <div class="profile">
+                <img src="images/rafting-guide.webp" alt="Employee 1">
+                <figcaption>John Doe, Rafting Guide</figcaption>
+            </div>
+            <div class="profile">
+                <img src="images/adventure-specialist.jpeg" alt="Employee 2">
+                <figcaption>Jane Smith, Adventure Specialist</figcaption>
+            </div>
+            <div class="profile">
+                <img src="images/safety-expert.jpeg" alt="Employee 3">
+                <figcaption>Alex Brown, Safety Expert</figcaption>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form action="#" method="post">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <fieldset>
+                    <legend>Purpose of Inquiry:</legend>
+                    <label><input type="radio" name="purpose" value="general" required> General Inquiry</label>
+                    <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label>
+                    <label><input type="radio" name="purpose" value="suggestion"> Website Suggestion</label>
+                </fieldset>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <label><input type="checkbox" name="newsletter"> Please subscribe me to the monthly newsletter</label>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; <span id="year">2024</span> White Water Rafting Adventures</p>
+            <p>Designed by Bintu Lukulay</p>
+        </div>
+
+        <nav class="social-links">
+            <a href="https://facebook.com" aria-label="Facebook">
+                <img src="images/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://twitter.com" aria-label="Twitter">
+                <img src="images/twitter.png" alt="Twitter">
+            </a>
+            <a href="https://instagram.com" aria-label="Instagram">
+                <img src="images/instagram.png" alt="Instagram">
+            </a>
+        </nav>
+        <p><a href="https://app.moqups.com/YNR5A2p0O5Gx9476JA87bSI3q6f9u17B/view/page/ad64222d5">View Wireframe</a></p>
+    </footer>
+
+    <script>
+        // Automatically update the copyright year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
