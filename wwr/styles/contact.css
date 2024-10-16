@@ -18,136 +18,221 @@ header {
     background-color: var(--primary-color);
     color: var(--secondary-color);
     padding: 10px 20px;
-    display: grid; 
-    grid-template-columns: 120px 1fr; 
-    align-items: center; 
-    gap: 20px; 
+    display: grid; /* Use grid layout */
+    grid-template-columns: 120px 1fr; /* Logo and Navigation */
+    align-items: center; /* Vertically center both logo and nav */
+    gap: 20px; /* Space between logo and navigation */
     border-bottom: 1px solid #ccc;
     max-width: 1350px;
-    margin: auto; 
+    margin: auto; /* Center header */
 }
 
 header img {
-    width: 100px; 
+    width: 100px; /* Adjust logo size for better visibility */
     height: auto;
 }
 
 /* Navigation Styles */
 nav {
-    display: flex; 
-    justify-content: flex-end; 
-    align-items: center; 
+    display: flex; /* Set display to flex */
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center; /* Center items vertically */
 }
 
 nav ul {
-    list-style-type: none; 
-    margin: 0; 
-    padding: 0; 
-    display: flex; 
-    gap: 20px; 
+    list-style-type: none; /* Remove bullet points */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use Flexbox for navigation */
+    gap: 20px; /* Space between nav items */
 }
 
 nav ul li {
-    margin: 0; 
+    margin: 0; /* Reset margin for uniform spacing */
 }
 
 nav a {
-    color: var(--secondary-color); 
-    text-decoration: none; 
-    padding: 10px 15px; 
-    display: block; 
-    font-weight: 400; 
+    color: var(--secondary-color); /* Link color */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 15px; /* Add padding for a better click area */
+    display: block; /* Ensure the link is block-level */
+    font-weight: 400; /* Regular font weight */
 }
 
 nav a:hover {
-    font-weight: 700; 
-    text-decoration: underline; 
+    font-weight: 700; /* Bold on hover */
+    text-decoration: underline; /* Optional hover effect */
 }
 
-/* Employee Profiles Section */
-.employee-profiles {
-    display: flex; 
-    justify-content: space-between; 
-    flex-wrap: nowrap; 
+/* Hero Section Styling */
+.hero {
+    position: relative;
+    height: 500px; 
+    overflow: hidden;
+    background-image: url('../images/rivernarrow.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--secondary-color);
+}
+
+.hero h1 {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    font-size: 2rem;
+    color: var(--secondary-color);
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.208);
+    padding: 10px;
+    border-radius: 5px;
+    font: 2rem;
+}
+
+/* Article Positioned Absolutely */
+.hero article {
+    position: absolute;
+    bottom: 20px; 
+    left: 20px;
+    width: 80%; 
+    background-color: rgba(255, 255, 255, 0.8); 
     padding: 20px;
+    border-radius: 8px;
+    z-index: 1; 
 }
 
-.employee-profiles figure {
+/* Image Inside Article Floating Right */
+.hero article img {
+    float: right;
+    width: 150px; 
+    height: auto; 
+    margin-left: 20px; 
+    border-radius: 8px;
+}
+
+/* Paragraph Styling Inside the Article */
+.hero article p {
+    color: var(--text-color); 
+    font-size: 1.1rem; 
+    line-height: 1.6; 
+}
+
+/* Clearfix for Floating Image in Article */
+.hero article::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* History Section Styles */
+.history-content {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    margin: 20px 0; /* Space out the section */
+}
+
+.history-content figure {
+    margin-right: 20px; /* Space between image and text */
+}
+
+.history-content img {
+    max-width: 300px; /* Limit image width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: add rounded corners */
+}
+
+/* Section Styles */
+section {
+    padding: 20px;
     text-align: center;
-    width: 30%; 
-    margin-bottom: 20px;
 }
 
-.employee-profiles img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover; 
+section h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
     margin-bottom: 10px;
 }
 
-.employee-profiles figcaption {
-    font-size: 1rem;
-    color: var(--text-color);
-    font-weight: bold;
+/* Adventures Section Styles */
+.rafting-images {
+    display: flex; /* Horizontal layout */
+    flex-wrap: wrap; /* Wrap images if necessary */
+    justify-content: space-between; /* Space between images */
+    max-width: 100%; /* Allow full width */
 }
 
-/* Contact Form Styles */
-.contact-form {
-    padding: 20px;
-    max-width: 600px;
-    margin: auto;
+.rafting-images figure {
+    margin: 0; /* Remove margin */
+    flex-basis: calc(20% - 10px); /* Set basis for each image */
+    text-align: center; /* Center captions */
 }
 
-.contact-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: var(--primary-color);
-}
-
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
+.rafting-images img {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
 
-.contact-form input[type="radio"] {
-    margin-right: 5px;
+.rafting-images img:hover {
+    transform: scale(1.05); /* Zoom on hover */
 }
 
-.contact-form input[type="checkbox"] {
-    margin-right: 10px;
-}
-
-.contact-form textarea {
-    height: 150px;
-    resize: none;
-}
-
-.contact-form input[type="submit"] {
-    background-color: var(--accent-color);
-    color: var(--primary-color);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.contact-form input[type="submit"]:hover {
+/* Footer Styles */
+footer {
     background-color: var(--primary-color);
     color: var(--secondary-color);
+    text-align: center;
+    padding: 10px;
+    display: flex; /* Use Flexbox for footer */
+    justify-content: space-between; /* Space content */
+    align-items: center; /* Center items */
 }
 
-/* Map Section */
-.map-iframe {
-    width: 100%;
-    height: 300px;
-    border: none;
-    border-radius: 8px; 
+footer nav {
+    display: flex; /* Use Flexbox for social links */
+    justify-content: flex-end; /* Align to the right */
+}
+
+.social-links {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+.social-links a {
+    margin: 0 10px; /* Space between icons */
+}
+
+.social-links img {
+    width: 30px; /* Set width for social media icons */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.social-links a:hover img {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack header items vertically */
+    }
+
+    .history-content {
+        flex-direction: column; /* Stack history section vertically on smaller screens */
+        align-items: flex-start; /* Align items to start */
+    }
+
+    .rafting-images {
+        flex-direction: column; /* Stack adventure images vertically on smaller screens */
+    }
+
+    .rafting-images figure {
+        flex-basis: calc(100% - 10px); /* Full width on smaller screens */
+        margin-bottom: 20px; /* Space below each image */
+    }
+}
