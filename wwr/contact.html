@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - White Water Rafting</title>
     <meta name="description" content="Contact us for inquiries about our rafting services.">
+    <meta name="author" content="Bintu Lukulay">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles/contact.css">
 </head>
 <body>
@@ -29,8 +36,7 @@
             <p>Address: 123 River Rapids Lane, Raft City, 45678</p>
             <p>Phone: (123) 456-7890</p>
             <p>Email: contact@raftingadventures.com</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d80032.19886997904!2d-11.782838540129354!3d7.995149430930723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e6!4m3!3m2!1d8.006190799999999!2d-11.8058189!4m3!3m2!1d7.953719199999999!2d-11.747197499999999!5e0!3m2!1sen!2ssl!4v1729070587127!5m2!1sen!2ssl" width=300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            
+            <iframe src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d80032.19886997904!2d-11.782838540129354!3d7.995149430930723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e6!4m3!3m2!1d8.006190799999999!2d-11.8058189!4m3!3m2!1d7.953719199999999!2d-11.747197499999999!5e0!3m2!1sen!2ssl!4v1729070587127!5m2!1sen!2ssl" class="map-iframe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
 
         <!-- Employee Profiles -->
@@ -56,25 +62,34 @@
             <form action="#" method="post">
                 <label for="name">Your Name:</label>
                 <input type="text" id="name" name="name" required>
-
+        
                 <label for="email">Your Email:</label>
                 <input type="email" id="email" name="email" required>
-
+        
                 <fieldset>
                     <legend>Purpose of Inquiry:</legend>
-                    <label><input type="radio" name="purpose" value="general" required> General Inquiry</label>
-                    <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label>
-                    <label><input type="radio" name="purpose" value="suggestion"> Website Suggestion</label>
+                    <label for="general">
+                        <input type="radio" id="general" name="purpose" value="general" required> General Inquiry
+                    </label>
+                    <label for="reservation">
+                        <input type="radio" id="reservation" name="purpose" value="reservation"> Reservation Question
+                    </label>
+                    <label for="suggestion">
+                        <input type="radio" id="suggestion" name="purpose" value="suggestion"> Website Suggestion
+                    </label>
                 </fieldset>
-
+        
                 <label for="message">Your Message:</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
-
-                <label><input type="checkbox" name="newsletter"> Please subscribe me to the monthly newsletter</label>
-
+        
+                <label for="newsletter">
+                    <input type="checkbox" id="newsletter" name="newsletter"> Please subscribe me to the monthly newsletter
+                </label>
+        
                 <button type="submit">Send Message</button>
             </form>
         </section>
+        
     </main>
 
     <!-- Footer -->
