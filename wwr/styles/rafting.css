@@ -151,7 +151,7 @@ nav a:hover {
 
 /* Map Section */
 .map-iframe {
-    width: 100%;
+    width: 30%;
     height: 300px;
     border: none;
     border-radius: 8px; 
