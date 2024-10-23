@@ -1,0 +1,148 @@
+/* Reset default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Define basic CSS variables for reusability */
+:root {
+  --primary-color: steelblue;
+  --secondary-color: #eee;
+  --text-color: #333;
+  --link-color: white;
+  --hover-link-color: lightgray; /* New hover color */
+  --border-color: rgba(0, 0, 0, 0.2);
+  --light-border-color: #ccc;
+  --font-size: 1rem;
+  --main-padding: 20px;
+  --grid-gap: 1rem;
+}
+
+/* Center and limit the width of header, grid, and footer */
+header, .grid, footer {
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+/* Navigation bar styling */
+nav {
+  background-color: var(--primary-color);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+nav a {
+  display: block;
+  padding: 0.5rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+nav a:hover {
+  background-color: var(--hover-link-color); /* Add hover effect */
+}
+
+/* Header styling for the h1 tag */
+h1 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+}
+
+/* Main section styling */
+main {
+  margin: 1rem;
+  grid-column: 2/3;
+  padding: var(--main-padding);
+}
+
+/* Styling the profile picture */
+main img {
+  float: right;
+  width: 150px;
+  height: auto;
+  border: 1px solid var(--primary-color);
+  padding: 1px;
+  margin-left: 10px;
+}
+
+/* Paragraph styling */
+p {
+  margin: 1rem 0;
+  font-size: var(--font-size);
+  line-height: 1.2;
+  color: var(--text-color);
+}
+
+/* Grid layout */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: var(--grid-gap);
+  align-items: start;
+}
+
+/* Styling for the aside section */
+aside {
+  width: 20rem;
+  margin: 1rem;
+  border: 1px solid var(--border-color);
+  padding: 1rem;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  text-align: center;
+  position: relative;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+aside h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+aside img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--light-border-color);
+  padding: 3px;
+}
+
+/* Footer styling */
+footer {
+  margin-top: 15px;
+  border-top: 1px solid var(--light-border-color);
+  text-align: center;
+  padding-top: 1rem;
+}
+
+/* Temple links with styling for the background and bullets */
+ul.box {
+  background-color: var(--secondary-color);
+  border: 1px solid var(--border-color);
+  padding: var(--main-padding); /* Corrected variable */
+  margin: 1rem 0; /* Add some margin around the box */
+}
+
+ul.box li a {
+  list-style-type: disc; /* Add bullet points */
+  padding-left: 10px; /* Space for bullets */
+}
+
+ul.box li {
+  margin: 0.5rem 0; /* Space between list items */
+}
+
+/* Add hover effect for temple links */
+ul.box li a:hover {
+  color: var(--primary-color); /* Change color on hover */
+}

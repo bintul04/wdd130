@@ -192,6 +192,20 @@ footer nav {
     transform: scale(1.1); /* Slightly enlarge on hover */
     transition: transform 0.3s ease; /* Smooth transition */
 }
+/* Wireframe Link Styles */
+.wireframe-link {
+    font-family: 'Roboto', sans-serif; /* Change to your preferred font */
+    color: var(--secondary-color); /* Use a custom color or hex code, e.g., #f2cb07 */
+    font-size: 1.2rem; /* Adjust font size as needed */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make the font bold */
+}
+
+.wireframe-link:hover {
+    color: var(--accent-color); /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover for emphasis */
+}
+
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
