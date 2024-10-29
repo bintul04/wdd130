@@ -8,9 +8,10 @@
 
 /* General Styles */
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', Roboto;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* Header Styles */
@@ -23,7 +24,7 @@ header {
     align-items: center; 
     gap: 20px; 
     border-bottom: 1px solid #ccc;
-    max-width: 1350px;
+    max-width: 1370px;
     margin: auto; 
 }
 
@@ -64,6 +65,225 @@ nav a:hover {
     text-decoration: underline; 
 }
 
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    height: 500px; 
+    overflow: hidden;
+    background-image: url('../images/rivernarrow.jpg');
+    background-image: url('../images/history-logo.jpg');
+    padding: 50px 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--secondary-color);
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    filter: brightness(0.7);
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: larger;
+    font-family: Roboto;
+    font-weight: 700;
+}
+.hero h1 {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    font-size: 2rem;
+    color: var(--secondary-color);
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.208);
+    padding: 10px;
+    border-radius: 5px;
+    font: 2rem;
+}
+/* Article Positioned Absolutely */
+.hero article {
+    position: absolute;
+    bottom: 20px; 
+    left: 20px;
+    width: 80%; 
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1; 
+    color: var(--text-color);
+}
+
+/* Image Inside Article Floating Right */
+.hero article img {
+    float: right;
+    width: 150px; 
+    height: auto; 
+    margin-left: 20px; 
+    border-radius: 8px;
+}
+
+/* Paragraph Styling Inside the Article */
+.hero article p {
+    color: var(--text-color); 
+    font-size: 1.1rem; 
+    line-height: 1.6; 
+}
+
+/* Clearfix for Floating Image in Article */
+.hero article::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+/* History Section Styles */
+.history-content {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    margin: 20px 0; /* Space out the section */
+}
+
+.history-content figure {
+    margin-right: 20px; /* Space between image and text */
+}
+
+.history-content img {
+    max-width: 300px; /* Limit image width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: add rounded corners */
+}
+
+/* Section Styles */
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+section h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+/* Adventures Section Styles */
+.rafting-images {
+    display: flex; /* Horizontal layout */
+    flex-wrap: wrap; /* Wrap images if necessary */
+    justify-content: space-between; /* Space between images */
+    max-width: 100%; /* Allow full width */
+}
+
+.rafting-images figure {
+    margin: 0; /* Remove margin */
+    flex-basis: calc(20% - 10px); /* Set basis for each image */
+    text-align: center; /* Center captions */
+}
+
+.rafting-images img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.rafting-images img:hover {
+    transform: scale(1.05); /* Zoom on hover */
+}
+
+/* Newsletter Signup */
+.newsletter {
+    padding: 20px;
+    text-align: center;
+    background-color: var(--secondary-color);
+}
+
+.newsletter h2 {
+    color: var(--primary-color);
+}
+
+.newsletter form {
+    max-width: 400px;
+    margin: auto;
+}
+
+.newsletter input[type="text"],
+.newsletter input[type="email"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.newsletter input[type="submit"] {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.newsletter input[type="submit"]:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+/* Call to Action */
+.call-to-action {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 20px;
+    font-weight: 300;
+}
+
+.call-to-action .cta-button {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.call-to-action .cta-button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Content Grid */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.content-grid article {
+    text-align: center;
+}
+
+.content-grid img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.content-grid h3 {
+    color: var(--primary-color);
+    margin: 10px 0;
+    font-family: Montserrat;
+    font-size: medium;
+}
 /* Employee Profiles Section */
 .employee-profiles {
     display: flex; 
@@ -156,6 +376,55 @@ nav a:hover {
     border: none;
     border-radius: 8px; 
 }
+/* Call to Action styling */
+.cta {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.cta-button {
+    background-color: #10447f;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+/* Trip section styling */
+.trip-group {
+    padding: 20px;
+    border-top: 1px solid #ccc;
+    text-align: center;
+}
+
+.trip-group h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.trips {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.trip {
+    text-align: center;
+    max-width: 200px;
+}
+
+.trip img {
+    width: 100%;
+    height: auto;
+}
+
+.book-button {
+    display: inline-block;
+    background-color: #f2cb07;
+    color: white;
+    padding: 10px;
+    text-decoration: underline;
+    margin-top: 10px;
+}
 
 /* Footer Styles */
 footer {
@@ -175,6 +444,8 @@ footer nav {
 
 .social-links {
     list-style: none; /* Remove bullet points */
+    display: flex;
+    gap: 15px;
     padding: 0; /* Remove padding */
     margin: 0; /* Remove margin */
 }
@@ -194,7 +465,7 @@ footer nav {
 }
 /* Wireframe Link Styles */
 .wireframe-link {
-    font-family: 'Roboto', sans-serif; /* Change to your preferred font */
+    font-family: 'Roboto', sans-serif; /* Change to your preferred font */;
     color: var(--secondary-color); /* Use a custom color or hex code, e.g., #f2cb07 */
     font-size: 1.2rem; /* Adjust font size as needed */
     text-decoration: none; /* Remove underline */
@@ -204,11 +475,15 @@ footer nav {
 .wireframe-link:hover {
     color: var(--accent-color); /* Change color on hover */
     text-decoration: underline; /* Add underline on hover for emphasis */
+    background-color: var(--secondary-color);
 }
 
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
     header {
         flex-direction: column; /* Stack header items vertically */
     }
@@ -226,4 +501,7 @@ footer nav {
         flex-basis: calc(100% - 10px); /* Full width on smaller screens */
         margin-bottom: 20px; /* Space below each image */
     }
+}
+.trip-section {
+    grid-template-columns: 1fr; /* Stack trips on smaller screens */
 }
